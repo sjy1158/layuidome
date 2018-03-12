@@ -6,6 +6,7 @@
     <title>layout 后台大布局 - Layui</title>
     <link rel="stylesheet" href="../css/layui.css">
     <link rel="stylesheet" href="../dist/css/iconfont.css">
+    <link rel="stylesheet" href="../dist/css/common.css">
     <link rel="stylesheet" href="../dist/css/cityschose.css">
 </head>
 <body class="layui-layout-body">
@@ -129,18 +130,50 @@
     </div>
 
     <div class="layui-body">
-        <!-- 内容主体区域 -->
-        <div style="padding: 15px;">内容主体区域</div>
+        <!--右边主体内容-->
+      <div class="layui-header">采购目录</div>
+      <div class="title">提示：当平台发起抽奖活动时候，授权将会的看配置，将会自动发出集采邀请。</div>
+      <!--输入框  form表单的提交-->
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="producename" required class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品分类</label>
+                <div class="layui-input-block">
+                    <select name="produce" lay-verify="selectProType">
+                        <option value="0">产品一</option>
+                        <option value="1">产品二</option>
+                        <option value="2">产品三</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="submit" class="layui-btn" lay-filter="formDemo">查询</button>
+                    <button type="button" class="layui-btn" lay-filter="formDemo">新建</button>
+                </div>
+            </div>
+        </form>
     </div>
 
 </div>
 <script src="../layui/layui.js"></script>
 <script>
-    //JavaScript代码区域
-    layui.use('element', function(){
-        var element = layui.element;
 
-    });
+    (function () {
+        layui.use(['element','form','jquery','layer','laydate','laypage '], function(){
+            var element = layui.element;
+            var form = layui.form();
+            var $ = layui.jquery;
+            var layer = layui.layer;
+            var load = layer.load(2);
+
+        });
+    })()
 </script>
 </body>
 </html>
