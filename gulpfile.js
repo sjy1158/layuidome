@@ -70,15 +70,31 @@ var gulp = require('gulp');
 
 var gulpLess = require('gulp-less');
 
+var connect = require('gulp-connect');
+
+
+function openServer() {
+    gulp.task('webserver',function () {
+        gulp.src('./cityschose')
+            .pipe(connect.server({
+                livereload: true, // 启用LiveReload
+                open: true, // 服务器启动时自动打开网页
+            }))
+    });
+    gulp.task('default',['webserver']);
+}
+openServer();
+
+//编译less
 function createTask(taskname,mode,firstSrc,destSrc) {
     gulp.task(taskname,function () {
         return gulp.src(firstSrc)
             .pipe(mode())
             .pipe(gulp.dest(destSrc))
+            .pipe(connect.reload())
     });
     gulp.task('default',[taskname]);
     gulp.watch(firstSrc,[taskname]);
 };
-
 createTask('lessTocss',gulpLess,'less/*.less','dist/css');
 
