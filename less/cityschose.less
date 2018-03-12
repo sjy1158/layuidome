@@ -1,0 +1,75 @@
+@layuibackground:none;
+@text-align:center;
+@dlbackground:#01253d;
+@padding:10px;
+@border:2px #d08851 solid;
+@font-weight:bold;
+div.layui-layout{
+  .layui-header{
+    .layui-nav.layui-layout-left{
+      float: left;
+      background: @layuibackground;
+    }
+    .layui-nav.layui-layout-right{
+      float: right;
+      background: @layuibackground;
+    }
+  }
+  .layui-nav{
+    .layui-nav-item{
+      a{
+        i{
+          padding-right: 10px;
+        }
+      }
+      .layui-nav-child{
+        dd{
+          a{
+            text-align: @text-align;
+          }
+        }
+      }
+    }
+  }
+  .layui-body{
+    .layui-header{
+      background: #fafafa!important;
+      height: 30px;
+      line-height: 30px;
+      padding: @padding;
+      border-left: @border;
+      font-weight: @font-weight;
+    }
+    .title{
+      height: 40px;
+      width: 100%;
+      background: #fdf6e7;
+      line-height: 40px;
+      color: #e8c58a;
+      padding-left: @padding*5;
+      font-weight:@font-weight;
+    }
+    form{
+      .layui-form-item{
+        button[type=submit]{
+          background: #46a0fe;
+          width: 80px;
+        }
+        button[type=button]{
+          background: #e79d28;
+          width: 80px;
+        }
+        clear: none!important;
+        float: left;
+      }
+      padding-left: @padding;
+      margin-top: 20px;
+      label{
+        font-weight: @font-weight;
+      }
+      input{
+        width: 200px;
+      }
+    }
+  }
+}

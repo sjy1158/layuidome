@@ -1,0 +1,53 @@
+div.layui-layout .layui-header .layui-nav.layui-layout-left {
+  float: left;
+  background: none;
+}
+div.layui-layout .layui-header .layui-nav.layui-layout-right {
+  float: right;
+  background: none;
+}
+div.layui-layout .layui-nav .layui-nav-item a i {
+  padding-right: 10px;
+}
+div.layui-layout .layui-nav .layui-nav-item .layui-nav-child dd a {
+  text-align: center;
+}
+div.layui-layout .layui-body .layui-header {
+  background: #fafafa!important;
+  height: 30px;
+  line-height: 30px;
+  padding: 10px;
+  border-left: 2px #d08851 solid;
+  font-weight: bold;
+}
+div.layui-layout .layui-body .title {
+  height: 40px;
+  width: 100%;
+  background: #fdf6e7;
+  line-height: 40px;
+  color: #e8c58a;
+  padding-left: 50px;
+  font-weight: bold;
+}
+div.layui-layout .layui-body form {
+  padding-left: 10px;
+  margin-top: 20px;
+}
+div.layui-layout .layui-body form .layui-form-item {
+  clear: none!important;
+  float: left;
+}
+div.layui-layout .layui-body form .layui-form-item button[type=submit] {
+  background: #46a0fe;
+  width: 80px;
+}
+div.layui-layout .layui-body form .layui-form-item button[type=button] {
+  background: #e79d28;
+  width: 80px;
+}
+div.layui-layout .layui-body form label {
+  font-weight: bold;
+}
+div.layui-layout .layui-body form input {
+  width: 200px;
+}
